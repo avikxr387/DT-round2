@@ -1,7 +1,7 @@
 fetch("https://dev.deepthought.education/assets/uploads/files/others/ddugky_project.json")
   .then(response => response.json())
   .then(data => {
-    renderTask(data.tasks[0]); // render first task
+    renderTask(data.tasks[0]); 
   });
 
 function createAsset(asset) {
