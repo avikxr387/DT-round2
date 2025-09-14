@@ -1,0 +1,166 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+
+body {
+  background: #f5f7fa;
+  color: #222;
+}
+
+
+.journey-board {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+
+.journey-board.collapsed {
+  width: 400px;
+}
+
+.journey-board.expanded {
+  width: 900px;
+}
+
+
+.sidebar {
+  width: 60px;
+  background: #f0f2f5;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.sidebar .step {
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+}
+
+
+.content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+
+.content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 1.2rem;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.card .description {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+
+.card .details {
+  display: none;
+  font-size: 13px;
+  color: #444;
+}
+
+.card.expanded .details {
+  display: block;
+}
+
+
+.card iframe, 
+.card video {
+  width: 100%;
+  height: 180px;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+
+.thread {
+  border-top: 1px solid #eee;
+  padding-top: 0.8rem;
+  font-size: 13px;
+}
+
+.thread input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  margin-top: 0.5rem;
+}
+
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 4px;
+}
